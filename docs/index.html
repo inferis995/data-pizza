@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Pizza - Datapizza AI Skills for Claude Code</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .code-block {
+            background: #1a202c;
+            color: #e2e8f0;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            font-family: 'Courier New', monospace;
+        }
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <i class="fas fa-pizza-slice text-orange-500 text-2xl mr-2"></i>
+                    <span class="text-xl font-bold text-gray-800">Data Pizza</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-purple-600 transition">Features</a>
+                    <a href="#installation" class="text-gray-600 hover:text-purple-600 transition">Installation</a>
+                    <a href="#examples" class="text-gray-600 hover:text-purple-600 transition">Examples</a>
+                    <a href="#contribute" class="text-gray-600 hover:text-purple-600 transition">Contribute</a>
+                    <a href="https://github.com/inferis995/data-pizza" class="text-gray-600 hover:text-purple-600 transition">
+                        <i class="fab fa-github mr-1"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl font-bold mb-6">
+                    🍕 Data Pizza
+                </h1>
+                <p class="text-2xl mb-8 opacity-90">
+                    Datapizza AI Skills for Claude Code
+                </p>
+                <p class="text-lg mb-12 opacity-80">
+                    Build powerful AI agents and tools for Datapizza AI framework with specialized Claude Code skills
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#installation" class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                        Get Started
+                    </a>
+                    <a href="https://github.com/inferis995/data-pizza" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition">
+                        <i class="fab fa-github mr-2"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold gradient-text mb-4">Powerful Features</h2>
+                <p class="text-xl text-gray-600">Everything you need to build production-ready AI agents</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- Agent Creator -->
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Agent Creator</h3>
+                    <p class="text-gray-600 mb-6">
+                        Generate production-ready AI agents with 5+ pre-built templates for various use cases including customer service, e-commerce, research, and RAG systems.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Multi-provider support (OpenAI, Anthropic, Google, Mistral)
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Production-ready error handling
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Quick setup in seconds
+                        </li>
+                    </ul>
+                    <div class="code-block text-sm">
+                        <span class="text-purple-400">/skill</span> datapizza-agent-creator --type basic --name assistant
+                    </div>
+                </div>
+
+                <!-- Tool Builder -->
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                    <div class="feature-icon">
+                        <i class="fas fa-tools text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Tool Builder</h3>
+                    <p class="text-gray-600 mb-6">
+                        Create custom @tool functions with robust error handling, type hints, and seamless integration with Datapizza AI agents.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Database, API, and file system tools
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Business logic and utility functions
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Best practices and validation
+                        </li>
+                    </ul>
+                    <div class="code-block text-sm">
+                        <span class="text-purple-400">/skill</span> datapizza-tool-builder --type database
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Section -->
+    <section id="installation" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold gradient-text mb-4">Quick Installation</h2>
+                <p class="text-xl text-gray-600">Get Data Pizza running in minutes with Claude Code</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Step 1: Clone Repository</h3>
+                    <div class="code-block">
+                        git clone https://github.com/inferis995/data-pizza.git<br>
+                        cd data-pizza
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Step 2: Install Dependencies</h3>
+                    <div class="code-block">
+                        # Core Datapizza AI framework<br>
+                        pip install datapizza-ai<br><br>
+                        # Official tools<br>
+                        pip install datapizza-ai-tools-sqldatabase<br>
+                        pip install datapizza-ai-tools-duckduckgo<br>
+                        pip install datapizza-ai-tools-filesystem<br>
+                        pip install datapizza-ai-tools-web-fetch<br><br>
+                        # Vector stores for RAG<br>
+                        pip install qdrant-client chromadb
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Step 3: Configure Claude Code</h3>
+                    <p class="text-gray-600 mb-4">Add Data Pizza skills to your Claude Code configuration:</p>
+                    <div class="code-block text-sm">
+                        {<br>
+                        &nbsp;&nbsp;"skills": [<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;{<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name": "datapizza-agent-creator",<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"path": "C:\\\\Users\\\\Utente\\\\Desktop\\\\data_pizza\\\\skills\\\\datapizza-agent-creator\\\\SKILL.md"<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;},<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;{<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name": "datapizza-tool-builder",<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"path": "C:\\\\Users\\\\Utente\\\\Desktop\\\\data_pizza\\\\skills\\\\datapizza-tool-builder\\\\SKILL.md"<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                        &nbsp;&nbsp;]<br>
+                        }
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Step 4: Set API Keys</h3>
+                    <div class="code-block">
+                        export OPENAI_API_KEY="your-openai-key"<br>
+                        # or<br>
+                        export ANTHROPIC_API_KEY="your-anthropic-key"
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section id="examples" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold gradient-text mb-4">Code Examples</h2>
+                <p class="text-xl text-gray-600">See Data Pizza in action with these examples</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Agent Example -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Customer Service Agent</h3>
+                    <p class="text-gray-600 mb-4">Generated with Agent Creator skill</p>
+                    <div class="code-block text-sm overflow-x-auto">
+                        <span class="text-purple-400">from</span> datapizza.agents <span class="text-purple-400">import</span> Agent<br>
+                        <span class="text-purple-400">from</span> datapizza.clients.openai <span class="text-purple-400">import</span> OpenAIClient<br>
+                        <span class="text-purple-400">from</span> datapizza.tools <span class="text-purple-400">import</span> tool<br><br>
+
+                        @tool<br>
+                        <span class="text-purple-400">def</span> get_customer_info(customer_id: str) -> str:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-gray-500">"""Get customer information."""</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-purple-400">return</span> fetch_customer(customer_id)<br><br>
+
+                        client = OpenAIClient(api_key=<span class="text-green-400">"YOUR_KEY"</span>)<br>
+                        agent = Agent(<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;name=<span class="text-green-400">"customer_service"</span>,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;system_prompt=<span class="text-green-400">"Help customers with their inquiries."</span>,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;client=client,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;tools=[get_customer_info]<br>
+                        )
+                    </div>
+                </div>
+
+                <!-- Tool Example -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Database Tool</h3>
+                    <p class="text-gray-600 mb-4">Generated with Tool Builder skill</p>
+                    <div class="code-block text-sm overflow-x-auto">
+                        <span class="text-purple-400">from</span> datapizza.tools <span class="text-purple-400">import</span> tool<br>
+                        <span class="text-purple-400">from</span> datapizza.tools.SQLDatabase <span class="text-purple-400">import</span> SQLDatabase<br><br>
+
+                        db = SQLDatabase(db_uri=<span class="text-green-400">"sqlite:///data.db"</span>)<br><br>
+
+                        @tool<br>
+                        <span class="text-purple-400">def</span> get_customer_data(customer_id: str) -> str:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-gray-500">"""Retrieve customer data safely."""</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-purple-400">try</span>:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;query = <span class="text-green-400">f"SELECT * FROM customers WHERE id = {customer_id}"</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result = db.run_sql_query(query)<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-purple-400">return</span> format_customer(result)<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-purple-400">except</span> Exception <span class="text-purple-400">as</span> e:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-purple-400">return</span> <span class="text-green-400">f"Error: {str(e)}"</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contribute Section -->
+    <section id="contribute" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold gradient-text mb-4">Contributing</h2>
+                <p class="text-xl text-gray-600">Help us build the best Datapizza AI skills for Claude Code</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8">
+                <div class="grid md:grid-cols-3 gap-8 mb-8">
+                    <div class="text-center">
+                        <div class="feature-icon mx-auto mb-4">
+                            <i class="fas fa-code text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">New Templates</h4>
+                        <p class="text-gray-600">Create agent templates for specific use cases</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="feature-icon mx-auto mb-4">
+                            <i class="fas fa-tools text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Tool Patterns</h4>
+                        <p class="text-gray-600">Develop @tool functions for common tasks</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="feature-icon mx-auto mb-4">
+                            <i class="fas fa-book text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Documentation</h4>
+                        <p class="text-gray-600">Improve docs and add examples</p>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="https://github.com/inferis995/data-pizza/blob/main/CONTRIBUTING.md" class="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition inline-block">
+                        <i class="fab fa-github mr-2"></i> View Contributing Guidelines
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <i class="fas fa-pizza-slice text-orange-500 text-xl mr-2"></i>
+                    <span class="text-lg font-semibold">Data Pizza</span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://github.com/inferis995/data-pizza" class="hover:text-orange-400 transition">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://github.com/datapizza-labs/datapizza-ai" class="hover:text-orange-400 transition">
+                        <i class="fas fa-external-link-alt text-xl"></i>
+                    </a>
+                    <a href="https://claude.ai/code" class="hover:text-orange-400 transition">
+                        <i class="fas fa-robot text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-gray-400">
+                <p>Made with ❤️ by <a href="https://github.com/inferis995" class="hover:text-white transition">Poola Ai</a></p>
+                <p class="mt-2">Built on top of <a href="https://github.com/datapizza-labs/datapizza-ai" class="hover:text-white transition">Datapizza AI</a> framework</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
