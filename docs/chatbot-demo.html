@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Pizza AI ChatBot Demo - Assistant Esperto con Mistral Magistral-Medium</title>
+
+    <!-- Meta Tags -->
+    <meta name="description" content="Testa il Data Pizza AI ChatBot powered by Mistral Magistral-Medium. Assistente esperto su Datapizza AI framework con web search e knowledge base integrata.">
+    <meta name="keywords" content="Data Pizza, ChatBot, Mistral, AI Assistant, Datapizza AI, Web Search">
+
+    <!-- Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --pizza-orange: #FF6B35;
+            --pizza-red: #E63946;
+            --basil-green: #52B788;
+            --gradient-primary: linear-gradient(135deg, var(--pizza-orange) 0%, var(--pizza-red) 100%);
+            --gradient-dark: linear-gradient(135deg, #1A1A2E 0%, #16213E 50%, #0F3460 100%);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .gradient-text {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .demo-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .pulse-animation {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: .5;
+            }
+        }
+
+        .chat-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-gradient-dark text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <h1 class="text-4xl font-bold mb-4 gradient-text">
+                    Data Pizza AI ChatBot Demo
+                </h1>
+                <p class="text-xl opacity-90 max-w-3xl mx-auto">
+                    Assistente AI esperto powered by Mistral Magistral-Medium con knowledge base integrata su Datapizza AI framework
+                </p>
+                <div class="mt-6 flex justify-center space-x-4">
+                    <span class="inline-flex items-center px-3 py-1 bg-green-500/20 rounded-full text-sm">
+                        <i class="fas fa-robot mr-2"></i>
+                        Magistral-Medium-2507
+                    </span>
+                    <span class="inline-flex items-center px-3 py-1 bg-blue-500/20 rounded-full text-sm">
+                        <i class="fas fa-globe mr-2"></i>
+                        Web Search Enabled
+                    </span>
+                    <span class="inline-flex items-center px-3 py-1 bg-purple-500/20 rounded-full text-sm">
+                        <i class="fas fa-brain mr-2"></i>
+                        Knowledge Base
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <!-- Features Grid -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-white text-center mb-8">
+                Caratteristiche Principali del ChatBot
+            </h2>
+
+            <div class="chat-features">
+                <div class="feature-card rounded-xl p-6 shadow-xl">
+                    <div class="text-orange-500 text-3xl mb-4">
+                        <i class="fas fa-pizza-slice"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">
+                        Esperto Data Pizza
+                    </h3>
+                    <p class="text-gray-600 text-sm">
+                        Conoscenza completa del framework Datapizza AI con documentazione aggiornata e best practices
+                    </p>
+                </div>
+
+                <div class="feature-card rounded-xl p-6 shadow-xl">
+                    <div class="text-blue-500 text-3xl mb-4">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">
+                        Web Search Integrato
+                    </h3>
+                    <p class="text-gray-600 text-sm">
+                        Ricerca automatica di informazioni aggiornate quando necessario per risposte complete
+                    </p>
+                </div>
+
+                <div class="feature-card rounded-xl p-6 shadow-xl">
+                    <div class="text-purple-500 text-3xl mb-4">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">
+                        Mistral Magistral
+                    </h3>
+                    <p class="text-gray-600 text-sm">
+                        Potenza del modello Magistral-Medium-2507 per reasoning avanzato e conversazioni naturali
+                    </p>
+                </div>
+
+                <div class="feature-card rounded-xl p-6 shadow-xl">
+                    <div class="text-green-500 text-3xl mb-4">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">
+                        Conversazione Continua
+                    </h3>
+                    <p class="text-gray-600 text-sm">
+                        Mantiene il contesto della conversazione per risposte coerenti e personalizzate
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Demo Instructions -->
+        <section class="demo-section rounded-2xl p-8 mb-8">
+            <h2 class="text-2xl font-bold text-white mb-6">
+                Come Testare il ChatBot
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold text-white mb-4">
+                        <i class="fas fa-question-circle mr-2"></i>
+                        Esempi di Domande:
+                    </h3>
+                    <ul class="space-y-2 text-white/90">
+                        <li class="flex items-start">
+                            <i class="fas fa-chevron-right mt-1 mr-2 text-orange-400"></i>
+                            <span>"Come installo Datapizza AI?"</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chevron-right mt-1 mr-2 text-orange-400"></i>
+                            <span>"Quali provider supporta Datapizza AI?"</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chevron-right mt-1 mr-2 text-orange-400"></i>
+                            <span>"Dammi un esempio di tool personalizzato"</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chevron-right mt-1 mr-2 text-orange-400"></i>
+                            <span>"Cos'è il RAG in Datapizza AI?"</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chevron-right mt-1 mr-2 text-orange-400"></i>
+                            <span>"Qual è l'ultima versione di Datapizza AI?"</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold text-white mb-4">
+                        <i class="fas fa-cogs mr-2"></i>
+                        Funzionalità:
+                    </h3>
+                    <ul class="space-y-2 text-white/90">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle mt-1 mr-2 text-green-400"></i>
+                            <span>Risposte in italiano con conoscenza specializzata</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle mt-1 mr-2 text-green-400"></i>
+                            <span>Ricerca web automatica per informazioni aggiornate</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle mt-1 mr-2 text-green-400"></i>
+                            <span>Formattazione del codice e markdown</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle mt-1 mr-2 text-green-400"></i>
+                            <span>Link cliccabili e risorse consigliate</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle mt-1 mr-2 text-green-400"></i>
+                            <span>Indicatore di digitazione in tempo reale</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="text-center">
+            <div class="bg-white/10 backdrop-filter backdrop-blur-lg rounded-2xl p-8 inline-block">
+                <h2 class="text-2xl font-bold text-white mb-4">
+                    Prova il ChatBot Ora!
+                </h2>
+                <p class="text-white/90 mb-6">
+                    Clicca sull'icona del chat in basso a destra per iniziare una conversazione con l'assistente AI esperto di Data Pizza
+                </p>
+                <div class="flex items-center justify-center space-x-4">
+                    <div class="text-white/80 text-sm">
+                        <i class="fas fa-arrow-down pulse-animation"></i>
+                    </div>
+                    <span class="text-white/80 text-sm">
+                        Chat disponibile in basso a destra →
+                    </span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include ChatBot -->
+    <script src="index.html"></script>
+
+    <!-- Demo Enhancements -->
+    <script>
+        // Auto-redirect to main page after showing this demo page
+        setTimeout(() => {
+            // Check if we need to load the chatbot from the main page
+            console.log('Data Pizza AI ChatBot Demo Page Loaded');
+            console.log('ChatBot should be available from the main page');
+        }, 1000);
+
+        // Add some demo functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add demo animations
+            const cards = document.querySelectorAll('.feature-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+
+            // Add keyboard shortcut to open chat
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'c' && e.ctrlKey) {
+                    e.preventDefault();
+                    // Try to open the chat (will work if main page chatbot is loaded)
+                    const chatToggle = document.getElementById('chatbot-toggle');
+                    if (chatToggle) {
+                        chatToggle.click();
+                    }
+                }
+            });
+
+            // Demo notification
+            setTimeout(() => {
+                if (typeof showToast === 'function') {
+                    showToast('Benvenuto nella demo del Data Pizza ChatBot! Clicca sull\'icona del chat in basso a destra per iniziare.', 'info');
+                }
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

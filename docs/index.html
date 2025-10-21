@@ -901,6 +901,10 @@
                         <i class="fab fa-github mr-1" aria-hidden="true"></i>
                         <span>GitHub</span>
                     </a>
+                    <a href="chatbot-demo.html" class="nav-link flex items-center">
+                        <i class="fas fa-robot mr-1" aria-hidden="true"></i>
+                        <span>Demo ChatBot</span>
+                    </a>
                 </div>
                 <!-- Mobile menu button (for future responsive implementation) -->
                 <button class="md:hidden text-primary" aria-label="Toggle menu" aria-expanded="false">
@@ -1260,6 +1264,152 @@
         </div>
     </section>
 
+    <!-- ChatBot Section -->
+    <section id="chatbot" class="py-20" style="background: linear-gradient(135deg, var(--stone-gray) 0%, #E8F4F8 100%);" role="region" aria-labelledby="chatbot-heading">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 id="chatbot-heading" class="text-responsive-4xl font-bold gradient-text mb-4">
+                    AI Assistant Integrato
+                </h2>
+                <p class="text-xl text-secondary max-w-3xl mx-auto">
+                    Chatbot esperto di Data Pizza powered by Mistral Magistral-Medium con knowledge base e web search
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+                <!-- AI Model Info -->
+                <div class="card text-center">
+                    <div class="feature-icon feature-icon-purple mx-auto mb-4">
+                        <i class="fas fa-brain text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Mistral Magistral-Medium</h3>
+                    <p class="text-secondary text-sm mb-4">
+                        Modello AI avanzato con capacità di reasoning e comprensione del linguaggio naturale
+                    </p>
+                    <div class="text-xs text-gray-500 space-y-1">
+                        <p>• Context window: 1000 tokens</p>
+                        <p>• Temperature: 0.7</p>
+                        <p>• Multi-lingual support</p>
+                    </div>
+                </div>
+
+                <!-- Knowledge Base -->
+                <div class="card text-center">
+                    <div class="feature-icon feature-icon-green mx-auto mb-4">
+                        <i class="fas fa-book text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Knowledge Base</h3>
+                    <p class="text-secondary text-sm mb-4">
+                        Database completo su Datapizza AI framework con documentazione e esempi
+                    </p>
+                    <div class="text-xs text-gray-500 space-y-1">
+                        <p>• Framework concepts</p>
+                        <p>• API documentation</p>
+                        <p>• Best practices</p>
+                        <p>• Troubleshooting</p>
+                    </div>
+                </div>
+
+                <!-- Web Search -->
+                <div class="card text-center">
+                    <div class="feature-icon feature-icon-orange mx-auto mb-4">
+                        <i class="fas fa-globe text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Web Search</h3>
+                    <p class="text-secondary text-sm mb-4">
+                        Ricerca automatica di informazioni aggiornate quando necessario
+                    </p>
+                    <div class="text-xs text-gray-500 space-y-1">
+                        <p>• Trigger intelligente</p>
+                        <p>• Fonti multiple</p>
+                        <p>• Fact checking</p>
+                        <p>• Real-time data</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Features -->
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-2xl shadow-xl p-8">
+                    <h3 class="text-2xl font-bold text-primary mb-6 text-center">
+                        Cosa Può Fare il ChatBot
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-code text-orange-500 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-primary">Assistenza Tecnica</h4>
+                                    <p class="text-secondary text-sm">Aiuto con installazione, configurazione e debugging</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-graduation-cap text-blue-500 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-primary">Formazione e Tutorial</h4>
+                                    <p class="text-secondary text-sm">Spiegazioni dettagliate e esempi pratici</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-lightbulb text-yellow-500 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-primary">Idee Creative</h4>
+                                    <p class="text-secondary text-sm">Suggerimenti per progetti e implementazioni</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-search text-green-500 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-primary">Ricerca Informazioni</h4>
+                                    <p class="text-secondary text-sm">Trova documentazione e risorse aggiornate</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-plug text-purple-500 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-primary">Integrazione Tools</h4>
+                                    <p class="text-secondary text-sm">Guida su connessione con sistemi esterni</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-chart-line text-red-500 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-primary">Best Practices</h4>
+                                    <p class="text-secondary text-sm">Consigli per sviluppo in produzione</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Try ChatBot CTA -->
+                    <div class="text-center mt-8">
+                        <button onclick="document.getElementById('chatbot-toggle').click()" class="btn btn-primary text-lg px-8 py-4 pulse-on-hover">
+                            <i class="fas fa-comments mr-2"></i>
+                            Prova il ChatBot Ora
+                        </button>
+                        <p class="text-sm text-secondary mt-3">
+                            <i class="fas fa-info-circle mr-1"></i>
+                            Chat disponibile in basso a destra →
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Demo Link -->
+            <div class="text-center mt-12">
+                <p class="text-secondary mb-4">
+                    Vuoi vedere una demo completa delle funzionalità del chatbot?
+                </p>
+                <a href="chatbot-demo.html" class="btn btn-secondary">
+                    <i class="fas fa-flask mr-2"></i>
+                    Pagina Demo Dettagliata
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Examples Section -->
     <section id="examples" class="py-20">
         <div class="container mx-auto px-6">
@@ -1386,6 +1536,120 @@
             </div>
         </div>
     </footer>
+
+    <!-- ChatBot Component -->
+    <div id="chatbot-container" class="fixed bottom-6 right-6 z-50">
+        <!-- Chat Toggle Button -->
+        <button id="chatbot-toggle"
+                class="bg-gradient-primary text-white rounded-full p-4 shadow-xl hover:scale-110 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-orange-300 relative group"
+                aria-label="Open Data Pizza AI Assistant">
+            <i class="fas fa-comments text-xl" id="chat-icon"></i>
+            <span class="absolute -top-2 -right-2 bg-green-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center animate-pulse">
+                <i class="fas fa-robot text-xs"></i>
+            </span>
+            <span class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                Data Pizza AI Assistant
+            </span>
+        </button>
+
+        <!-- Chat Window -->
+        <div id="chatbot-window" class="hidden absolute bottom-20 right-0 w-96 h-[600px] bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col border border-gray-200">
+            <!-- Chat Header -->
+            <div class="bg-gradient-primary text-white p-4 flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                        <i class="fas fa-pizza-slice text-lg"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold">Data Pizza AI Assistant</h3>
+                        <p class="text-xs opacity-90">Powered by Mistral Magistral-Medium</p>
+                    </div>
+                </div>
+                <button id="minimize-chat" class="text-white/80 hover:text-white transition" aria-label="Minimize chat">
+                    <i class="fas fa-minus"></i>
+                </button>
+            </div>
+
+            <!-- Chat Messages -->
+            <div id="chat-messages" class="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50">
+                <!-- Welcome Message -->
+                <div class="flex items-start space-x-3">
+                    <div class="w-8 h-8 bg-gradient-primary rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-robot text-sm text-white"></i>
+                    </div>
+                    <div class="flex-1">
+                        <div class="bg-white p-3 rounded-lg shadow-sm border border-gray-200">
+                            <p class="text-sm text-gray-700">
+                                👋 Ciao! Sono l'Assistente AI esperto di Data Pizza! Posso aiutarti con:
+                            </p>
+                            <ul class="text-xs text-gray-600 mt-2 space-y-1">
+                                <li>• Creazione di agenti AI con Datapizza AI</li>
+                                <li>• Sviluppo di tool personalizzati</li>
+                                <li>• Best practices e configurazione</li>
+                                <li>• Ricerca di informazioni aggiornate</li>
+                                <li>• Esempi pratici e tutorial</li>
+                            </ul>
+                            <p class="text-sm text-gray-700 mt-2">
+                                Come posso aiutarti oggi? 😊
+                            </p>
+                        </div>
+                        <span class="text-xs text-gray-500 mt-1">Data Pizza AI</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Input -->
+            <div class="p-4 bg-white border-t border-gray-200">
+                <div class="flex items-center space-x-2">
+                    <button id="web-search-toggle"
+                            class="p-2 text-gray-500 hover:text-orange-500 transition tooltip"
+                            data-tooltip="Toggle web search"
+                            aria-label="Toggle web search">
+                        <i class="fas fa-globe"></i>
+                    </button>
+                    <div class="flex-1 relative">
+                        <input id="chat-input"
+                               type="text"
+                               placeholder="Chiedimi qualsiasi cosa su Data Pizza..."
+                               class="w-full px-4 py-2 pr-10 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
+                               aria-label="Type your message">
+                        <button id="send-message"
+                                class="absolute right-1 top-1/2 transform -translate-y-1/2 bg-gradient-primary text-white p-1.5 rounded-full hover:scale-110 transition disabled:opacity-50"
+                                aria-label="Send message">
+                            <i class="fas fa-paper-plane text-xs"></i>
+                        </button>
+                    </div>
+                    <button id="voice-input"
+                            class="p-2 text-gray-500 hover:text-orange-500 transition tooltip"
+                            data-tooltip="Voice input (coming soon)"
+                            aria-label="Voice input">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+                <div class="mt-2 flex items-center justify-between text-xs text-gray-500">
+                    <div class="flex items-center space-x-3">
+                        <span id="web-search-status" class="flex items-center">
+                            <i class="fas fa-globe text-gray-400 mr-1"></i>
+                            Web search: <span id="search-status">disabled</span>
+                        </span>
+                        <span id="model-status" class="flex items-center">
+                            <i class="fas fa-brain text-gray-400 mr-1"></i>
+                            Mistral Magistral-Medium
+                        </span>
+                    </div>
+                    <span id="typing-indicator" class="hidden">
+                        <i class="fas fa-ellipsis text-orange-500 animate-pulse"></i> AI sta scrivendo...
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Minimized Chat Bubble -->
+        <div id="chat-minimized" class="hidden bg-white rounded-full px-4 py-2 shadow-lg border border-gray-200 flex items-center space-x-2">
+            <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+            <span class="text-sm font-medium">Chat attivo</span>
+        </div>
+    </div>
 
     <script>
         // ===== UTILITY FUNCTIONS =====
@@ -1677,6 +1941,410 @@
                 trackEvent('code_copy', {
                     code_type: this.closest('.code-block').querySelector('.text-xs').textContent
                 });
+            });
+        });
+
+        // ===== CHATBOT IMPLEMENTATION =====
+        class DataPizzaChatBot {
+            constructor() {
+                this.apiKey = 'JHoFOzDdRZOV483zX2xpfRkQXQYO0XDX'; // API Key Mistral
+                this.apiUrl = 'https://api.mistral.ai/v1/chat/completions';
+                this.webSearchEnabled = false;
+                this.conversationHistory = [];
+                this.isTyping = false;
+
+                this.initializeChatBot();
+                this.loadKnowledgeBase();
+            }
+
+            initializeChatBot() {
+                // DOM Elements
+                this.chatToggle = document.getElementById('chatbot-toggle');
+                this.chatWindow = document.getElementById('chatbot-window');
+                this.chatMinimized = document.getElementById('chat-minimized');
+                this.chatMessages = document.getElementById('chat-messages');
+                this.chatInput = document.getElementById('chat-input');
+                this.sendButton = document.getElementById('send-message');
+                this.minimizeButton = document.getElementById('minimize-chat');
+                this.webSearchToggle = document.getElementById('web-search-toggle');
+                this.typingIndicator = document.getElementById('typing-indicator');
+                this.searchStatus = document.getElementById('search-status');
+
+                // Event Listeners
+                this.chatToggle.addEventListener('click', () => this.toggleChat());
+                this.minimizeButton.addEventListener('click', () => this.minimizeChat());
+                this.sendButton.addEventListener('click', () => this.sendMessage());
+                this.chatInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter' && !e.shiftKey) {
+                        e.preventDefault();
+                        this.sendMessage();
+                    }
+                });
+                this.webSearchToggle.addEventListener('click', () => this.toggleWebSearch());
+
+                // Initialize UI
+                this.updateWebSearchStatus();
+            }
+
+            // Knowledge Base per Data Pizza
+            loadKnowledgeBase() {
+                this.knowledgeBase = {
+                    datapizza_ai: {
+                        description: "Datapizza AI è un framework GenAI Python con design 'less abstraction, more control'",
+                        features: [
+                            "Supporto multi-provider: OpenAI, Google Gemini, Anthropic, Mistral, Azure",
+                            "Integrazione tools: Web search, document processing, custom tools",
+                            "Tracciamento OpenTelemetry per observability",
+                            "Design vendor-agnostic",
+                            "Architettura modulare con componenti opzionali"
+                        ],
+                        installation: "pip install datapizza-ai",
+                        quick_example: `from datapizza.agents import Agent
+from datapizza.clients.openai import OpenAIClient
+from datapizza.tools import tool
+
+@tool
+def get_weather(city: str) -> str:
+    return f"The weather in {city} is sunny"
+
+client = OpenAIClient(api_key="YOUR_API_KEY")
+agent = Agent(name="assistant", client=client, tools=[get_weather])
+response = agent.run("What is the weather in Rome?")`
+                    },
+                    tools: {
+                        sql_database: {
+                            description: "Tool per operazioni database con connessioni SQL",
+                            usage: "Permette di eseguire query SQL su vari database"
+                        },
+                        duckduckgo: {
+                            description: "Tool per web search con DuckDuckGo",
+                            usage: "Permette di cercare informazioni online"
+                        },
+                        filesystem: {
+                            description: "Tool per operazioni sul filesystem",
+                            usage: "Permette di leggere, scrivere e manipolare file"
+                        },
+                        web_fetch: {
+                            description: "Tool per recuperare contenuti da pagine web",
+                            usage: "Permette di fare scraping di contenuti web"
+                        }
+                    },
+                    concepts: {
+                        agents: "Entità AI con capacità di utilizzare strumenti per compiti specifici",
+                        tools: "Funzioni che gli agenti possono chiamare per interagire con sistemi esterni",
+                        rag: "Retrieval-Augmented Generation - combina ricerca vettoriale con generazione",
+                        vector_stores: "Database per memorizzare e recuperare vettori di embedding",
+                        multi_agent: "Sistemi con più agenti che collaborano"
+                    },
+                    providers: {
+                        openai: "Provider GPT models",
+                        anthropic: "Provider Claude models",
+                        google: "Provider Gemini models",
+                        mistral: "Provider Mistral models",
+                        azure: "Provider Azure OpenAI"
+                    }
+                };
+            }
+
+            async callMistralAPI(messages, useWebSearch = false) {
+                const requestBody = {
+                    model: "magistral-medium-2507",
+                    messages: messages,
+                    max_tokens: 1000,
+                    temperature: 0.7,
+                    top_p: 0.9,
+                    stream: false
+                };
+
+                // Aggiungi context della knowledge base
+                const systemMessage = {
+                    role: "system",
+                    content: `Sei un assistente AI esperto di Data Pizza AI framework.
+                    Informazioni chiave su Data Pizza:
+                    ${JSON.stringify(this.knowledgeBase, null, 2)}
+
+                    Rispondi sempre in italiano. Sii preciso, utile e professionale.
+                    Usa le informazioni fornite per rispondere alle domande.
+                    Se non conosci la risposta, suggerisci dove trovare l'informazione.
+                    ${useWebSearch ? 'Usa le capacità di ricerca web se necessario per informazioni aggiornate.' : ''}`
+                };
+
+                const allMessages = [systemMessage, ...messages];
+
+                try {
+                    const response = await fetch(this.apiUrl, {
+                        method: 'POST',
+                        headers: {
+                            'Authorization': `Bearer ${this.apiKey}`,
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(requestBody)
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+
+                    const data = await response.json();
+                    return data.choices[0].message.content;
+                } catch (error) {
+                    console.error('Error calling Mistral API:', error);
+                    throw error;
+                }
+            }
+
+            async performWebSearch(query) {
+                // Simulazione di web search - in produzione integrerei con un vero servizio
+                const searchResults = {
+                    query: query,
+                    results: [
+                        {
+                            title: "Data Pizza AI - GitHub Repository",
+                            url: "https://github.com/datapizza-labs/datapizza-ai",
+                            snippet: "A Python-based GenAI framework with API-first design and built-in observability."
+                        },
+                        {
+                            title: "Data Pizza Skills - Documentation",
+                            url: "https://github.com/inferis995/data-pizza",
+                            snippet: "Claude Code skills for rapid AI agent and tool development with Datapizza AI."
+                        }
+                    ]
+                };
+
+                return searchResults;
+            }
+
+            async sendMessage() {
+                const message = this.chatInput.value.trim();
+                if (!message || this.isTyping) return;
+
+                // Add user message to chat
+                this.addMessage(message, 'user');
+                this.chatInput.value = '';
+                this.isTyping = true;
+                this.showTypingIndicator();
+
+                try {
+                    // Add to conversation history
+                    this.conversationHistory.push({ role: 'user', content: message });
+
+                    let response;
+
+                    if (this.webSearchEnabled && this.needsWebSearch(message)) {
+                        // Perform web search first
+                        const searchResults = await this.performWebSearch(message);
+                        const searchContext = `Risultati della ricerca web su "${message}":\n${JSON.stringify(searchResults, null, 2)}`;
+
+                        this.conversationHistory.push({
+                            role: 'system',
+                            content: searchContext
+                        });
+
+                        response = await this.callMistralAPI(this.conversationHistory, true);
+
+                        // Add search results context
+                        this.addMessage('🔍 Ho cercato informazioni aggiornate su internet...', 'system');
+                    } else {
+                        response = await this.callMistralAPI(this.conversationHistory);
+                    }
+
+                    // Add AI response
+                    this.addMessage(response, 'ai');
+                    this.conversationHistory.push({ role: 'assistant', content: response });
+
+                } catch (error) {
+                    console.error('Error in sendMessage:', error);
+                    this.addMessage('Mi dispiace, ho riscontrato un errore. Riprova più tardi.', 'error');
+                } finally {
+                    this.isTyping = false;
+                    this.hideTypingIndicator();
+                }
+            }
+
+            needsWebSearch(message) {
+                const searchKeywords = ['ultimo', 'recente', 'attuale', 'nuovo', 'aggiornamento', 'versione', 'notizie', 'news'];
+                return searchKeywords.some(keyword =>
+                    message.toLowerCase().includes(keyword)
+                );
+            }
+
+            addMessage(content, type = 'ai') {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'flex items-start space-x-3 animate-fade-in';
+
+                let avatar, sender, messageClass;
+
+                switch(type) {
+                    case 'user':
+                        avatar = '<i class="fas fa-user text-sm"></i>';
+                        sender = 'Tu';
+                        messageClass = 'bg-gradient-primary text-white';
+                        break;
+                    case 'ai':
+                        avatar = '<i class="fas fa-robot text-sm text-white"></i>';
+                        sender = 'Data Pizza AI';
+                        messageClass = 'bg-white border border-gray-200';
+                        break;
+                    case 'system':
+                        avatar = '<i class="fas fa-info-circle text-sm text-blue-500"></i>';
+                        sender = 'Sistema';
+                        messageClass = 'bg-blue-50 text-blue-700 border border-blue-200';
+                        break;
+                    case 'error':
+                        avatar = '<i class="fas fa-exclamation-triangle text-sm text-red-500"></i>';
+                        sender = 'Errore';
+                        messageClass = 'bg-red-50 text-red-700 border border-red-200';
+                        break;
+                }
+
+                const avatarClass = type === 'user' ? 'bg-gray-600' : 'bg-gradient-primary';
+
+                messageDiv.innerHTML = `
+                    <div class="w-8 h-8 ${avatarClass} rounded-full flex items-center justify-center flex-shrink-0">
+                        ${avatar}
+                    </div>
+                    <div class="flex-1">
+                        <div class="${messageClass} p-3 rounded-lg shadow-sm">
+                            <p class="text-sm whitespace-pre-wrap">${this.formatMessage(content)}</p>
+                        </div>
+                        <span class="text-xs text-gray-500 mt-1">${sender}</span>
+                    </div>
+                `;
+
+                this.chatMessages.appendChild(messageDiv);
+                this.scrollToBottom();
+            }
+
+            formatMessage(content) {
+                // Format code blocks
+                content = content.replace(/```(\w+)?\n([\s\S]*?)```/g,
+                    '<pre class="bg-gray-900 text-green-400 p-2 rounded text-xs overflow-x-auto"><code>$2</code></pre>');
+
+                // Format inline code
+                content = content.replace(/`([^`]+)`/g,
+                    '<code class="bg-gray-200 px-1 rounded text-xs">$1</code>');
+
+                // Format bold
+                content = content.replace(/\*\*(.*?)\*\*/g,
+                    '<strong>$1</strong>');
+
+                // Format links
+                content = content.replace(/(https?:\/\/[^\s]+)/g,
+                    '<a href="$1" target="_blank" class="text-blue-500 underline" rel="noopener noreferrer">$1</a>');
+
+                return content;
+            }
+
+            scrollToBottom() {
+                this.chatMessages.scrollTop = this.chatMessages.scrollHeight;
+            }
+
+            showTypingIndicator() {
+                this.typingIndicator.classList.remove('hidden');
+            }
+
+            hideTypingIndicator() {
+                this.typingIndicator.classList.add('hidden');
+            }
+
+            toggleChat() {
+                if (this.chatWindow.classList.contains('hidden')) {
+                    this.chatWindow.classList.remove('hidden');
+                    this.chatMinimized.classList.add('hidden');
+                    this.chatToggle.classList.add('hidden');
+                    this.chatInput.focus();
+                } else {
+                    this.minimizeChat();
+                }
+            }
+
+            minimizeChat() {
+                this.chatWindow.classList.add('hidden');
+                this.chatMinimized.classList.remove('hidden');
+                this.chatToggle.classList.remove('hidden');
+            }
+
+            toggleWebSearch() {
+                this.webSearchEnabled = !this.webSearchEnabled;
+                this.updateWebSearchStatus();
+
+                if (this.webSearchEnabled) {
+                    showToast('Ricerca web abilitata', 'success');
+                } else {
+                    showToast('Ricerca web disabilitata', 'info');
+                }
+            }
+
+            updateWebSearchStatus() {
+                this.searchStatus.textContent = this.webSearchEnabled ? 'enabled' : 'disabled';
+                this.searchStatus.className = this.webSearchEnabled ?
+                    'text-green-500 font-medium' : 'text-gray-500';
+
+                this.webSearchToggle.classList.toggle('text-orange-500', this.webSearchEnabled);
+                this.webSearchToggle.classList.toggle('text-gray-500', !this.webSearchEnabled);
+            }
+        }
+
+        // Initialize ChatBot
+        const chatBot = new DataPizzaChatBot();
+
+        // CSS Animations for ChatBot
+        const chatBotStyles = `
+            @keyframes fade-in {
+                from { opacity: 0; transform: translateY(10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+
+            .animate-fade-in {
+                animation: fade-in 0.3s ease-out;
+            }
+
+            .tooltip {
+                position: relative;
+            }
+
+            .tooltip:hover::after {
+                content: attr(data-tooltip);
+                position: absolute;
+                bottom: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                background: #1f2937;
+                color: white;
+                padding: 0.25rem 0.5rem;
+                border-radius: 0.25rem;
+                font-size: 0.75rem;
+                white-space: nowrap;
+                z-index: 1000;
+                margin-bottom: 0.25rem;
+            }
+        `;
+
+        // Add chatbot styles
+        const styleSheet = document.createElement('style');
+        styleSheet.textContent = chatBotStyles;
+        document.head.appendChild(styleSheet);
+
+        // Chat Analytics
+        function trackChatEvent(eventName, properties = {}) {
+            trackEvent(`chat_${eventName}`, properties);
+        }
+
+        // Track chat interactions
+        document.getElementById('chatbot-toggle')?.addEventListener('click', () => {
+            trackChatEvent('opened');
+        });
+
+        document.getElementById('send-message')?.addEventListener('click', () => {
+            trackChatEvent('message_sent', {
+                message_length: chatBot.chatInput.value.length,
+                web_search_enabled: chatBot.webSearchEnabled
+            });
+        });
+
+        document.getElementById('web-search-toggle')?.addEventListener('click', () => {
+            trackChatEvent('web_search_toggled', {
+                enabled: !chatBot.webSearchEnabled
             });
         });
     </script>
