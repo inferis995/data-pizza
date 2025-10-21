@@ -3,217 +3,1257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Pizza - Datapizza AI Skills for Claude Code</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="Data Pizza - Build powerful AI agents and tools for Datapizza AI framework with specialized Claude Code skills. Agent Creator, Tool Builder, and production-ready templates.">
+    <meta name="keywords" content="Data Pizza, Datapizza AI, Claude Code, AI agents, machine learning, Python skills, agent creator, tool builder, automation">
+    <meta name="author" content="Poola Ai">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://inferis995.github.io/data-pizza/">
+    <meta property="og:title" content="Data Pizza - Datapizza AI Skills for Claude Code">
+    <meta property="og:description" content="Build powerful AI agents and tools for Datapizza AI framework with specialized Claude Code skills.">
+    <meta property="og:image" content="https://inferis995.github.io/data-pizza/images/og-image.png">
+    <meta property="og:site_name" content="Data Pizza">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://inferis995.github.io/data-pizza/">
+    <meta property="twitter:title" content="Data Pizza - Datapizza AI Skills for Claude Code">
+    <meta property="twitter:description" content="Build powerful AI agents and tools for Datapizza AI framework with specialized Claude Code skills.">
+    <meta property="twitter:image" content="https://inferis995.github.io/data-pizza/images/twitter-card.png">
+    <meta property="twitter:creator" content="@inferis995">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍕</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍕</text></svg>">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- Critical CSS -->
     <style>
+        /* Critical above-the-fold styles */
+        body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;margin:0;background:#F8F9FA;color:#495057;line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.hero-gradient{background:linear-gradient(135deg,#1A1A2E 0%,#16213E 50%,#0F3460 100%);color:#fff;padding:5rem 0;text-align:center}.gradient-text{background:linear-gradient(135deg,#FF6B35 0%,#E63946 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-weight:700}.btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.5rem;border-radius:0.5rem;font-weight:600;text-decoration:none;transition:all 0.3s ease;cursor:pointer;border:none;font-size:1rem}.btn-primary{background:linear-gradient(135deg,#FF6B35 0%,#E63946 100%);color:#fff;box-shadow:0 4px 6px rgba(0,0,0,0.1)}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(0,0,0,0.1)}.nav-sticky{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);background:rgba(255,255,255,0.95);border-bottom:1px solid rgba(255,107,53,0.1)}.skip-link{position:absolute;top:-40px;left:6px;background:#FF6B35;color:#fff;padding:8px;text-decoration:none;border-radius:4px;z-index:100;transition:top 0.15s ease}.skip-link:focus{top:6px}
+    </style>
+
+    <title>Data Pizza - Datapizza AI Skills for Claude Code</title>
+
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    <!-- Google Fonts for better typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== DESIGN SYSTEM ===== */
+        :root {
+            /* Food/Tech Color Palette */
+            --pizza-orange: #FF6B35; /* Main brand - vibrant orange */
+            --pizza-red: #E63946; /* Secondary - rich red */
+            --basil-green: #52B788; /* Accent - fresh green */
+            --cheese-yellow: #FFD60A; /* Highlight - warm yellow */
+            --oregano-purple: #7209B7; /* Tech accent - deep purple */
+            --tomato-red: #F72585; /* Bright accent */
+
+            /* Neutral Colors */
+            --stone-gray: #F8F9FA; /* Light background */
+            --pepper-gray: #495057; /* Text primary */
+            --salt-white: #FFFFFF; /* Pure white */
+            --shadow-dark: #212529; /* Dark text */
+
+            /* Semantic Colors */
+            --success: #52B788;
+            --warning: #FFD60A;
+            --error: #E63946;
+            --info: #7209B7;
+
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, var(--pizza-orange) 0%, var(--pizza-red) 100%);
+            --gradient-secondary: linear-gradient(135deg, var(--oregano-purple) 0%, var(--tomato-red) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--basil-green) 0%, var(--cheese-yellow) 100%);
+            --gradient-dark: linear-gradient(135deg, #1A1A2E 0%, #16213E 50%, #0F3460 100%);
+
+            /* Typography */
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+
+            /* Spacing */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --space-2xl: 4rem;
+
+            /* Shadows */
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.1), 0 6px 10px rgba(0,0,0,0.08);
+            --shadow-xl: 0 20px 40px rgba(0,0,0,0.15), 0 10px 20px rgba(0,0,0,0.1);
+            --shadow-glow: 0 0 20px rgba(255, 107, 53, 0.3);
+
+            /* Border Radius */
+            --radius-sm: 0.375rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+            --radius-full: 9999px;
+
+            /* Transitions */
+            --transition-fast: 0.15s ease-out;
+            --transition-base: 0.3s ease-out;
+            --transition-slow: 0.5s ease-out;
+        }
+
+        /* ===== BASE STYLES ===== */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            background: var(--stone-gray);
+            color: var(--pepper-gray);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ===== UTILITY CLASSES ===== */
         .gradient-text {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: var(--gradient-primary);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
         }
-        .hero-gradient {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+        .gradient-text-secondary {
+            background: var(--gradient-secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
         }
-        .card-hover {
-            transition: all 0.3s ease;
+
+        .text-primary {
+            color: var(--pepper-gray);
         }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+        .text-secondary {
+            color: #6C757D;
         }
-        .code-block {
-            background: #1a202c;
-            color: #e2e8f0;
-            border-radius: 0.5rem;
-            padding: 1rem;
-            font-family: 'Courier New', monospace;
+
+        .bg-gradient-primary {
+            background: var(--gradient-primary);
         }
+
+        .bg-gradient-secondary {
+            background: var(--gradient-secondary);
+        }
+
+        .bg-gradient-accent {
+            background: var(--gradient-accent);
+        }
+
+        .bg-gradient-dark {
+            background: var(--gradient-dark);
+        }
+
+        /* ===== COMPONENTS ===== */
+
+        /* Feature Icons */
         .feature-icon {
-            width: 60px;
-            height: 60px;
+            width: 64px;
+            height: 64px;
             display: flex;
             align-items: center;
             justify-content: center;
+            border-radius: var(--radius-lg);
+            background: var(--gradient-primary);
+            color: var(--salt-white);
+            margin-bottom: var(--space-md);
+            font-size: 1.5rem;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-base);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left var(--transition-slow);
+        }
+
+        .feature-icon:hover::before {
+            left: 100%;
+        }
+
+        .feature-icon:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: var(--shadow-glow);
+        }
+
+        /* Feature Icon Variants */
+        .feature-icon-orange {
+            background: linear-gradient(135deg, var(--pizza-orange) 0%, var(--tomato-red) 100%);
+        }
+
+        .feature-icon-green {
+            background: linear-gradient(135deg, var(--basil-green) 0%, #2D6A4F 100%);
+        }
+
+        .feature-icon-purple {
+            background: var(--gradient-secondary);
+        }
+
+        .feature-icon-yellow {
+            background: linear-gradient(135deg, var(--cheese-yellow) 0%, #F4A261 100%);
+        }
+
+        /* Card Components */
+        .card {
+            background: var(--salt-white);
+            border-radius: var(--radius-xl);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-base);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 107, 53, 0.1);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform var(--transition-base);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--pizza-orange);
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card-hover {
+            transition: all var(--transition-base);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-xl);
+        }
+
+        /* Button Components */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-xs);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all var(--transition-base);
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: var(--radius-full);
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width var(--transition-slow), height var(--transition-slow);
+        }
+
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: var(--salt-white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--pepper-gray);
+            border: 2px solid var(--pizza-orange);
+        }
+
+        .btn-secondary:hover {
+            background: var(--pizza-orange);
+            color: var(--salt-white);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--salt-white);
+            border: 2px solid var(--salt-white);
+        }
+
+        .btn-outline:hover {
+            background: var(--salt-white);
+            color: var(--pizza-orange);
+            transform: translateY(-2px);
+        }
+
+        /* Code Blocks */
+        .code-block {
+            background: #1E1E2E;
+            color: #CDD6F4;
+            border-radius: var(--radius-lg);
+            padding: var(--space-md);
+            font-family: var(--font-mono);
+            font-size: 0.875rem;
+            line-height: 1.5;
+            border: 1px solid #313244;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .code-block::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gradient-accent);
+        }
+
+        .code-block .keyword {
+            color: #CBA6F7;
+            font-weight: 600;
+        }
+
+        .code-block .string {
+            color: #A6E3A1;
+        }
+
+        .code-block .function {
+            color: #89B4FA;
+        }
+
+        .code-block .comment {
+            color: #6C7086;
+            font-style: italic;
+        }
+
+        /* Navigation */
+        .nav-sticky {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid rgba(255, 107, 53, 0.1);
+        }
+
+        .nav-link {
+            position: relative;
+            color: var(--pepper-gray);
+            font-weight: 500;
+            transition: color var(--transition-fast);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transition: width var(--transition-base);
+        }
+
+        .nav-link:hover {
+            color: var(--pizza-orange);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Logo Animation */
+        .logo-pizza {
+            display: inline-block;
+            animation: pizzaFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes pizzaFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            25% { transform: translateY(-3px) rotate(-5deg); }
+            75% { transform: translateY(-3px) rotate(5deg); }
+        }
+
+        /* Hero Section Enhancements */
+        .hero-gradient {
+            background: var(--gradient-dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-gradient::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,107,53,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-gradient::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,107,53,0.1) 0%, transparent 70%);
+            animation: heroGlow 10s ease-in-out infinite alternate;
+        }
+
+        @keyframes heroGlow {
+            0% { transform: translate(-50%, -50%) scale(1); }
+            100% { transform: translate(-30%, -30%) scale(1.2); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Loading Animations */
+        .loading-dots span {
+            animation: loadingDot 1.4s ease-in-out infinite both;
+        }
+
+        .loading-dots span:nth-child(1) { animation-delay: -0.32s; }
+        .loading-dots span:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes loadingDot {
+            0%, 80%, 100% {
+                transform: scale(0.8);
+                opacity: 0.5;
+            }
+            40% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Accessibility Focus Styles */
+        *:focus {
+            outline: 2px solid var(--pizza-orange);
+            outline-offset: 2px;
+        }
+
+        .btn:focus,
+        .nav-link:focus {
+            outline: 2px solid var(--pizza-orange);
+            outline-offset: 2px;
+            border-radius: var(--radius-sm);
+        }
+
+        /* Skip to main content for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--pizza-orange);
+            color: var(--salt-white);
+            padding: 8px;
+            text-decoration: none;
+            border-radius: var(--radius-sm);
+            z-index: 100;
+            transition: top var(--transition-fast);
+        }
+
+        .skip-link:focus {
+            top: 6px;
+        }
+
+        /* Responsive Typography */
+        .text-responsive-4xl {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            line-height: 1.1;
+        }
+
+        .text-responsive-5xl {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            line-height: 1.1;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--stone-gray);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-primary);
+            border-radius: var(--radius-full);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--pizza-orange);
+        }
+
+        /* ===== ACCESSIBILITY CLASSES ===== */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .focus-visible:focus {
+            outline: 2px solid var(--pizza-orange);
+            outline-offset: 2px;
+        }
+
+        /* Enhanced contrast for better readability */
+        .high-contrast {
+            filter: contrast(1.2);
+        }
+
+        /* Reduced motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+
+            .logo-pizza {
+                animation: none;
+            }
+
+            .hero-gradient::after {
+                animation: none;
+            }
+        }
+
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --stone-gray: #1A1A1A;
+                --pepper-gray: #E8E8E8;
+                --salt-white: #FFFFFF;
+            }
+
+            .nav-sticky {
+                background: rgba(26, 26, 26, 0.95);
+            }
+
+            .card {
+                background: #2A2A2A;
+                border-color: rgba(255, 107, 53, 0.2);
+            }
+        }
+
+        /* Mobile responsiveness improvements */
+        @media (max-width: 768px) {
+            .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .text-responsive-5xl {
+                font-size: clamp(2rem, 8vw, 3rem);
+            }
+
+            .text-responsive-4xl {
+                font-size: clamp(1.5rem, 6vw, 2.5rem);
+            }
+
+            .installation-step {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .installation-step span {
+                font-size: 0.75rem;
+            }
+
+            .code-block {
+                font-size: 0.75rem;
+                padding: 0.75rem;
+                overflow-x: auto;
+            }
+
+            .btn {
+                padding: 0.625rem 1.25rem;
+                font-size: 0.875rem;
+            }
+
+            .feature-icon {
+                width: 56px;
+                height: 56px;
+                font-size: 1.25rem;
+            }
+
+            .card {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Tablet responsiveness */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .grid.md\\:grid-cols-2 {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .max-w-6xl {
+                max-width: 100%;
+                padding: 0 2rem;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .hero-gradient,
+            .installation-step,
+            .btn,
+            .code-block button {
+                display: none;
+            }
+
+            .card {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ccc;
+            }
+
+            body {
+                font-size: 12pt;
+                line-height: 1.4;
+            }
+
+            .gradient-text {
+                background: none;
+                color: var(--pizza-orange);
+                -webkit-text-fill-color: var(--pizza-orange);
+            }
+        }
+
+        /* Additional utility classes */
+        .text-gradient-accent {
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+        }
+
+        .hover-lift {
+            transition: transform var(--transition-base);
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-4px);
+        }
+
+        .hover-scale {
+            transition: transform var(--transition-base);
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+
+        /* Loading states */
+        .loading {
+            position: relative;
+            pointer-events: none;
+            opacity: 0.7;
+        }
+
+        .loading::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            margin: -10px 0 0 -10px;
+            border: 2px solid transparent;
+            border-top-color: var(--pizza-orange);
             border-radius: 50%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            margin-bottom: 1rem;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Command line styling enhancements */
+        .command-line {
+            font-family: 'JetBrains Mono', monospace;
+            line-height: 1.6;
+        }
+
+        .command-line .keyword {
+            color: #FF79C6;
+            font-weight: 600;
+        }
+
+        .command-line .string {
+            color: #F1FA8C;
+        }
+
+        .command-line .function {
+            color: #8BE9FD;
+        }
+
+        .command-line .comment {
+            color: #6272A4;
+            font-style: italic;
+        }
+
+        /* Installation progress line animation */
+        .progress-line {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-line::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: progressShine 2s ease-in-out infinite;
+        }
+
+        @keyframes progressShine {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        /* Enhanced button hover states */
+        .btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 2px;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: xor;
+            opacity: 0;
+            transition: opacity var(--transition-base);
+        }
+
+        .btn:hover::after {
+            opacity: 1;
+        }
+
+        /* Microinteractions */
+        .pulse-on-hover:hover {
+            animation: pulse 1s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Feature grid layout improvements */
+        .feature-grid {
+            display: grid;
+            gap: var(--space-lg);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        /* Enhanced card layouts */
+        .card-featured {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-featured::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-xl);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity var(--transition-base);
+        }
+
+        .card-featured:hover::before {
+            opacity: 1;
+        }
+
+        .card-featured:hover {
+            transform: translateY(-8px);
+        }
+
+        /* Tooltip styles */
+        .tooltip {
+            position: relative;
+        }
+
+        .tooltip::before {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--shadow-dark);
+            color: var(--salt-white);
+            padding: 0.5rem 0.75rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.875rem;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity var(--transition-base);
+            margin-bottom: 0.5rem;
+        }
+
+        .tooltip:hover::before {
+            opacity: 1;
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Navigation -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="nav-sticky sticky top-0 z-50" role="navigation" aria-label="Main navigation">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center">
-                    <i class="fas fa-pizza-slice text-orange-500 text-2xl mr-2"></i>
-                    <span class="text-xl font-bold text-gray-800">Data Pizza</span>
+                    <i class="fas fa-pizza-slice text-3xl logo-pizza" style="color: var(--pizza-orange);" aria-hidden="true"></i>
+                    <span class="text-xl font-bold text-primary ml-2">Data Pizza</span>
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#features" class="text-gray-600 hover:text-purple-600 transition">Features</a>
-                    <a href="#installation" class="text-gray-600 hover:text-purple-600 transition">Installation</a>
-                    <a href="#examples" class="text-gray-600 hover:text-purple-600 transition">Examples</a>
-                    <a href="#contribute" class="text-gray-600 hover:text-purple-600 transition">Contribute</a>
-                    <a href="https://github.com/inferis995/data-pizza" class="text-gray-600 hover:text-purple-600 transition">
-                        <i class="fab fa-github mr-1"></i> GitHub
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#installation" class="nav-link">Installation</a>
+                    <a href="#examples" class="nav-link">Examples</a>
+                    <a href="#contribute" class="nav-link">Contribute</a>
+                    <a href="https://github.com/inferis995/data-pizza" class="nav-link flex items-center" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github mr-1" aria-hidden="true"></i>
+                        <span>GitHub</span>
                     </a>
                 </div>
+                <!-- Mobile menu button (for future responsive implementation) -->
+                <button class="md:hidden text-primary" aria-label="Toggle menu" aria-expanded="false">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-gradient text-white py-20">
+    <section id="main-content" class="hero-gradient text-white py-20" role="banner">
         <div class="container mx-auto px-6 text-center">
-            <div class="max-w-4xl mx-auto">
-                <h1 class="text-5xl font-bold mb-6">
-                    🍕 Data Pizza
+            <div class="max-w-5xl mx-auto hero-content">
+                <!-- Animated pizza icon -->
+                <div class="mb-8">
+                    <span class="text-6xl logo-pizza" style="color: var(--pizza-orange);" aria-hidden="true">🍕</span>
+                </div>
+
+                <h1 class="text-responsive-5xl font-bold mb-6">
+                    Data Pizza
                 </h1>
-                <p class="text-2xl mb-8 opacity-90">
-                    Datapizza AI Skills for Claude Code
+
+                <div class="inline-block mb-8 px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full border border-orange-400/30">
+                    <p class="text-xl font-medium text-white">
+                        <span class="loading-dots">
+                            <span>🤖</span>
+                            <span>🛠️</span>
+                            <span>🍕</span>
+                        </span>
+                        Datapizza AI Skills for Claude Code
+                    </p>
+                </div>
+
+                <p class="text-lg mb-12 opacity-90 max-w-3xl mx-auto">
+                    Build powerful AI agents and tools for Datapizza AI framework with specialized Claude Code skills.
+                    <span class="text-orange-400 font-semibold">From development to production, fast.</span>
                 </p>
-                <p class="text-lg mb-12 opacity-80">
-                    Build powerful AI agents and tools for Datapizza AI framework with specialized Claude Code skills
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#installation" class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#installation" class="btn btn-primary text-lg px-8 py-4" role="button">
+                        <i class="fas fa-rocket mr-2"></i>
                         Get Started
                     </a>
-                    <a href="https://github.com/inferis995/data-pizza" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition">
-                        <i class="fab fa-github mr-2"></i> View on GitHub
+                    <a href="https://github.com/inferis995/data-pizza"
+                       class="btn btn-outline text-lg px-8 py-4"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       role="button">
+                        <i class="fab fa-github mr-2"></i>
+                        View on GitHub
+                        <i class="fas fa-external-link-alt ml-2 text-sm opacity-75"></i>
                     </a>
+                </div>
+
+                <!-- Trust indicators -->
+                <div class="mt-16 flex flex-wrap justify-center gap-8 text-sm opacity-80">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-check-circle text-green-400"></i>
+                        <span>Production Ready</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-shield-alt text-blue-400"></i>
+                        <span>Best Practices</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-bolt text-yellow-400"></i>
+                        <span>Lightweight</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-code text-purple-400"></i>
+                        <span>Developer Friendly</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-20">
+    <section id="features" class="py-20" role="region" aria-labelledby="features-heading">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold gradient-text mb-4">Powerful Features</h2>
-                <p class="text-xl text-gray-600">Everything you need to build production-ready AI agents</p>
+                <h2 id="features-heading" class="text-responsive-4xl font-bold gradient-text mb-4">
+                    Powerful Features
+                </h2>
+                <p class="text-xl text-secondary max-w-3xl mx-auto">
+                    Everything you need to build production-ready AI agents with Datapizza AI framework
+                </p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
                 <!-- Agent Creator -->
-                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
-                    <div class="feature-icon">
-                        <i class="fas fa-robot text-2xl"></i>
+                <article class="card" role="article">
+                    <div class="feature-icon feature-icon-orange">
+                        <i class="fas fa-robot text-2xl" aria-hidden="true"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Agent Creator</h3>
-                    <p class="text-gray-600 mb-6">
+                    <h3 class="text-2xl font-bold text-primary mb-4">
+                        Agent Creator
+                    </h3>
+                    <p class="text-secondary mb-6">
                         Generate production-ready AI agents with 5+ pre-built templates for various use cases including customer service, e-commerce, research, and RAG systems.
                     </p>
-                    <ul class="space-y-2 mb-6">
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Multi-provider support (OpenAI, Anthropic, Google, Mistral)
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start text-secondary">
+                            <i class="fas fa-check-circle text-success mt-1 mr-3 flex-shrink-0" aria-hidden="true"></i>
+                            <span><strong>Multi-provider support</strong> - OpenAI, Anthropic, Google, Mistral</span>
                         </li>
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Production-ready error handling
+                        <li class="flex items-start text-secondary">
+                            <i class="fas fa-check-circle text-success mt-1 mr-3 flex-shrink-0" aria-hidden="true"></i>
+                            <span><strong>Production-ready</strong> error handling and logging</span>
                         </li>
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Quick setup in seconds
+                        <li class="flex items-start text-secondary">
+                            <i class="fas fa-check-circle text-success mt-1 mr-3 flex-shrink-0" aria-hidden="true"></i>
+                            <span><strong>Quick setup</strong> - Generate agents in seconds, not hours</span>
                         </li>
                     </ul>
-                    <div class="code-block text-sm">
-                        <span class="text-purple-400">/skill</span> datapizza-agent-creator --type basic --name assistant
+                    <div class="code-block" role="img" aria-label="Code example">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs text-gray-400">Command</span>
+                            <button class="text-xs text-orange-400 hover:text-orange-300 transition" onclick="copyToClipboard(this.parentElement.nextElementSibling.textContent)" aria-label="Copy code">
+                                <i class="fas fa-copy mr-1"></i>Copy
+                            </button>
+                        </div>
+                        <div>
+                            <span class="function">/skill</span> datapizza-agent-creator <span class="keyword">--type</span> basic <span class="keyword">--name</span> assistant
+                        </div>
                     </div>
-                </div>
+                </article>
 
                 <!-- Tool Builder -->
-                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
-                    <div class="feature-icon">
-                        <i class="fas fa-tools text-2xl"></i>
+                <article class="card" role="article">
+                    <div class="feature-icon feature-icon-green">
+                        <i class="fas fa-tools text-2xl" aria-hidden="true"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Tool Builder</h3>
-                    <p class="text-gray-600 mb-6">
+                    <h3 class="text-2xl font-bold text-primary mb-4">
+                        Tool Builder
+                    </h3>
+                    <p class="text-secondary mb-6">
                         Create custom @tool functions with robust error handling, type hints, and seamless integration with Datapizza AI agents.
                     </p>
-                    <ul class="space-y-2 mb-6">
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Database, API, and file system tools
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start text-secondary">
+                            <i class="fas fa-check-circle text-success mt-1 mr-3 flex-shrink-0" aria-hidden="true"></i>
+                            <span><strong>Database, API, and file system</strong> tools</span>
                         </li>
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Business logic and utility functions
+                        <li class="flex items-start text-secondary">
+                            <i class="fas fa-check-circle text-success mt-1 mr-3 flex-shrink-0" aria-hidden="true"></i>
+                            <span><strong>Business logic</strong> and utility functions</span>
                         </li>
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Best practices and validation
+                        <li class="flex items-start text-secondary">
+                            <i class="fas fa-check-circle text-success mt-1 mr-3 flex-shrink-0" aria-hidden="true"></i>
+                            <span><strong>Best practices</strong> and validation patterns</span>
                         </li>
                     </ul>
-                    <div class="code-block text-sm">
-                        <span class="text-purple-400">/skill</span> datapizza-tool-builder --type database
+                    <div class="code-block" role="img" aria-label="Code example">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs text-gray-400">Command</span>
+                            <button class="text-xs text-orange-400 hover:text-orange-300 transition" onclick="copyToClipboard(this.parentElement.nextElementSibling.textContent)" aria-label="Copy code">
+                                <i class="fas fa-copy mr-1"></i>Copy
+                            </button>
+                        </div>
+                        <div>
+                            <span class="function">/skill</span> datapizza-tool-builder <span class="keyword">--type</span> database
+                        </div>
                     </div>
+                </article>
+            </div>
+
+            <!-- Additional Features Grid -->
+            <div class="grid md:grid-cols-3 gap-8 mt-16 max-w-4xl mx-auto">
+                <div class="text-center card p-6">
+                    <div class="feature-icon feature-icon-purple mx-auto mb-4" style="width: 48px; height: 48px; font-size: 1.2rem;">
+                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                    </div>
+                    <h4 class="font-bold text-primary mb-2">Secure by Design</h4>
+                    <p class="text-sm text-secondary">Built-in security patterns and validation for production environments</p>
+                </div>
+                <div class="text-center card p-6">
+                    <div class="feature-icon feature-icon-yellow mx-auto mb-4" style="width: 48px; height: 48px; font-size: 1.2rem;">
+                        <i class="fas fa-tachometer-alt" aria-hidden="true"></i>
+                    </div>
+                    <h4 class="font-bold text-primary mb-2">Performance Optimized</h4>
+                    <p class="text-sm text-secondary">Lightweight and efficient with minimal overhead</p>
+                </div>
+                <div class="text-center card p-6">
+                    <div class="feature-icon mx-auto mb-4" style="width: 48px; height: 48px; font-size: 1.2rem; background: var(--gradient-accent);">
+                        <i class="fas fa-code-branch" aria-hidden="true"></i>
+                    </div>
+                    <h4 class="font-bold text-primary mb-2">Developer First</h4>
+                    <p class="text-sm text-secondary">Intuitive APIs and comprehensive documentation</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Installation Section -->
-    <section id="installation" class="py-20 bg-gray-100">
+    <section id="installation" class="py-20" style="background: linear-gradient(135deg, var(--stone-gray) 0%, #E8F4F8 100%);" role="region" aria-labelledby="installation-heading">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold gradient-text mb-4">Quick Installation</h2>
-                <p class="text-xl text-gray-600">Get Data Pizza running in minutes with Claude Code</p>
+                <h2 id="installation-heading" class="text-responsive-4xl font-bold gradient-text mb-4">
+                    Quick Installation
+                </h2>
+                <p class="text-xl text-secondary max-w-2xl mx-auto">
+                    Get Data Pizza running in minutes with Claude Code and start building AI agents
+                </p>
             </div>
 
-            <div class="max-w-4xl mx-auto">
-                <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Step 1: Clone Repository</h3>
-                    <div class="code-block">
-                        git clone https://github.com/inferis995/data-pizza.git<br>
-                        cd data-pizza
+            <div class="max-w-5xl mx-auto">
+                <!-- Installation Progress Indicator -->
+                <div class="flex justify-center mb-12">
+                    <div class="flex items-center space-x-4">
+                        <div class="installation-step" data-step="1">
+                            <div class="w-10 h-10 rounded-full bg-gradient-primary text-white flex items-center justify-center font-bold">1</div>
+                            <span class="text-sm text-secondary mt-1">Clone</span>
+                        </div>
+                        <div class="w-16 h-0.5 bg-gray-300"></div>
+                        <div class="installation-step" data-step="2">
+                            <div class="w-10 h-10 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center font-bold">2</div>
+                            <span class="text-sm text-secondary mt-1">Install</span>
+                        </div>
+                        <div class="w-16 h-0.5 bg-gray-300"></div>
+                        <div class="installation-step" data-step="3">
+                            <div class="w-10 h-10 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center font-bold">3</div>
+                            <span class="text-sm text-secondary mt-1">Configure</span>
+                        </div>
+                        <div class="w-16 h-0.5 bg-gray-300"></div>
+                        <div class="installation-step" data-step="4">
+                            <div class="w-10 h-10 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center font-bold">4</div>
+                            <span class="text-sm text-secondary mt-1">Setup API</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Step 2: Install Dependencies</h3>
-                    <div class="code-block">
-                        # Core Datapizza AI framework<br>
-                        pip install datapizza-ai<br><br>
-                        # Official tools<br>
-                        pip install datapizza-ai-tools-sqldatabase<br>
-                        pip install datapizza-ai-tools-duckduckgo<br>
-                        pip install datapizza-ai-tools-filesystem<br>
-                        pip install datapizza-ai-tools-web-fetch<br><br>
-                        # Vector stores for RAG<br>
-                        pip install qdrant-client chromadb
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Left Column - Steps -->
+                    <div class="space-y-6">
+                        <!-- Step 1 -->
+                        <div class="card installation-card" data-step-card="1">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-primary text-white flex items-center justify-center font-bold text-sm mr-4">1</div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-primary mb-3">Clone Repository</h3>
+                                    <div class="code-block" role="img" aria-label="Git clone commands">
+                                        <div class="flex items-center justify-between mb-2">
+                                            <span class="text-xs text-gray-400">Terminal</span>
+                                            <button class="text-xs text-orange-400 hover:text-orange-300 transition" onclick="copyToClipboard('git clone https://github.com/inferis995/data-pizza.git\ncd data-pizza')" aria-label="Copy code">
+                                                <i class="fas fa-copy mr-1"></i>Copy
+                                            </button>
+                                        </div>
+                                        <div class="command-line">
+                                            <span class="comment"># Clone the repository</span><br>
+                                            <span class="keyword">git clone</span> https://github.com/inferis995/data-pizza.git<br>
+                                            <span class="keyword">cd</span> data-pizza
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="card installation-card" data-step-card="2">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center font-bold text-sm mr-4">2</div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-primary mb-3">Install Dependencies</h3>
+                                    <div class="code-block" role="img" aria-label="Installation commands">
+                                        <div class="flex items-center justify-between mb-2">
+                                            <span class="text-xs text-gray-400">Terminal</span>
+                                            <button class="text-xs text-orange-400 hover:text-orange-300 transition" onclick="copyToClipboard('# Core Datapizza AI framework\npip install datapizza-ai\n\n# Official tools\npip install datapizza-ai-tools-sqldatabase\npip install datapizza-ai-tools-duckduckgo\npip install datapizza-ai-tools-filesystem\npip install datapizza-ai-tools-web-fetch\n\n# Vector stores for RAG\npip install qdrant-client chromadb')" aria-label="Copy code">
+                                                <i class="fas fa-copy mr-1"></i>Copy
+                                            </button>
+                                        </div>
+                                        <div class="command-line text-sm">
+                                            <span class="comment"># Core Datapizza AI framework</span><br>
+                                            <span class="keyword">pip install</span> datapizza-ai<br><br>
+                                            <span class="comment"># Official tools</span><br>
+                                            <span class="keyword">pip install</span> datapizza-ai-tools-sqldatabase<br>
+                                            <span class="keyword">pip install</span> datapizza-ai-tools-duckduckgo<br>
+                                            <span class="keyword">pip install</span> datapizza-ai-tools-filesystem<br>
+                                            <span class="keyword">pip install</span> datapizza-ai-tools-web-fetch<br><br>
+                                            <span class="comment"># Vector stores for RAG</span><br>
+                                            <span class="keyword">pip install</span> qdrant-client chromadb
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Steps -->
+                    <div class="space-y-6">
+                        <!-- Step 3 -->
+                        <div class="card installation-card" data-step-card="3">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center font-bold text-sm mr-4">3</div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-primary mb-3">Configure Claude Code</h3>
+                                    <p class="text-secondary mb-3">Add Data Pizza skills to your Claude Code configuration:</p>
+                                    <div class="code-block" role="img" aria-label="Configuration JSON">
+                                        <div class="flex items-center justify-between mb-2">
+                                            <span class="text-xs text-gray-400">claude_config.json</span>
+                                            <button class="text-xs text-orange-400 hover:text-orange-300 transition" onclick="copyToClipboard('{\n  \"skills\": [\n    {\n      \"name\": \"datapizza-agent-creator\",\n      \"path\": \"C:\\\\Users\\\\YourUser\\\\data-pizza\\\\skills\\\\datapizza-agent-creator\\\\SKILL.md\"\n    },\n    {\n      \"name\": \"datapizza-tool-builder\",\n      \"path\": \"C:\\\\Users\\\\YourUser\\\\data-pizza\\\\skills\\\\datapizza-tool-builder\\\\SKILL.md\"\n    }\n  ]\n}')" aria-label="Copy code">
+                                                <i class="fas fa-copy mr-1"></i>Copy
+                                            </button>
+                                        </div>
+                                        <div class="command-line text-xs">
+                                            {<br>
+                                            &nbsp;&nbsp;<span class="string">"skills"</span>: [<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;{<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"name"</span>: <span class="string">"datapizza-agent-creator"</span>,<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"path"</span>: <span class="string">"C:\\\\Users\\\\YourUser\\\\data-pizza\\\\skills\\\\datapizza-agent-creator\\\\SKILL.md"</span><br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;},<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;{<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"name"</span>: <span class="string">"datapizza-tool-builder"</span>,<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"path"</span>: <span class="string">"C:\\\\Users\\\\YourUser\\\\data-pizza\\\\skills\\\\datapizza-tool-builder\\\\SKILL.md"</span><br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                                            &nbsp;&nbsp;]<br>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="card installation-card" data-step-card="4">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center font-bold text-sm mr-4">4</div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-primary mb-3">Set API Keys</h3>
+                                    <div class="code-block" role="img" aria-label="Environment variable commands">
+                                        <div class="flex items-center justify-between mb-2">
+                                            <span class="text-xs text-gray-400">Terminal</span>
+                                            <button class="text-xs text-orange-400 hover:text-orange-300 transition" onclick="copyToClipboard('export OPENAI_API_KEY=\"your-openai-key\"\n# or\nexport ANTHROPIC_API_KEY=\"your-anthropic-key\"')" aria-label="Copy code">
+                                                <i class="fas fa-copy mr-1"></i>Copy
+                                            </button>
+                                        </div>
+                                        <div class="command-line">
+                                            <span class="keyword">export</span> <span class="string">OPENAI_API_KEY</span>=<span class="string">"your-openai-key"</span><br>
+                                            <span class="comment"># or</span><br>
+                                            <span class="keyword">export</span> <span class="string">ANTHROPIC_API_KEY</span>=<span class="string">"your-anthropic-key"</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Step 3: Configure Claude Code</h3>
-                    <p class="text-gray-600 mb-4">Add Data Pizza skills to your Claude Code configuration:</p>
-                    <div class="code-block text-sm">
-                        {<br>
-                        &nbsp;&nbsp;"skills": [<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;{<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name": "datapizza-agent-creator",<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"path": "C:\\\\Users\\\\Utente\\\\Desktop\\\\data_pizza\\\\skills\\\\datapizza-agent-creator\\\\SKILL.md"<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;},<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;{<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name": "datapizza-tool-builder",<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"path": "C:\\\\Users\\\\Utente\\\\Desktop\\\\data_pizza\\\\skills\\\\datapizza-tool-builder\\\\SKILL.md"<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
-                        &nbsp;&nbsp;]<br>
-                        }
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-lg p-8">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Step 4: Set API Keys</h3>
-                    <div class="code-block">
-                        export OPENAI_API_KEY="your-openai-key"<br>
-                        # or<br>
-                        export ANTHROPIC_API_KEY="your-anthropic-key"
+                <!-- Success Message -->
+                <div class="mt-12 text-center">
+                    <div class="inline-flex items-center px-6 py-3 bg-gradient-accent rounded-full">
+                        <i class="fas fa-check-circle text-green-600 mr-2"></i>
+                        <span class="font-semibold text-primary">Ready to start building AI agents!</span>
                     </div>
                 </div>
             </div>
@@ -348,21 +1388,74 @@
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
+        // ===== UTILITY FUNCTIONS =====
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                showToast('Code copied to clipboard!', 'success');
+            }).catch(err => {
+                showToast('Failed to copy code', 'error');
+            });
+        }
+
+        function showToast(message, type = 'info') {
+            const toast = document.createElement('div');
+            toast.className = `fixed bottom-4 right-4 px-6 py-3 rounded-lg text-white font-medium z-50 transform transition-all duration-300 ${
+                type === 'success' ? 'bg-green-500' :
+                type === 'error' ? 'bg-red-500' :
+                'bg-blue-500'
+            }`;
+            toast.textContent = message;
+            toast.style.transform = 'translateY(100px)';
+            toast.style.opacity = '0';
+
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.style.transform = 'translateY(0)';
+                toast.style.opacity = '1';
+            }, 100);
+
+            setTimeout(() => {
+                toast.style.transform = 'translateY(100px)';
+                toast.style.opacity = '0';
+                setTimeout(() => document.body.removeChild(toast), 300);
+            }, 3000);
+        }
+
+        // ===== SMOOTH SCROLLING =====
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
+                const targetId = this.getAttribute('href');
+                const target = document.querySelector(targetId);
+
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
                     });
+
+                    // Update active nav state
+                    updateActiveNav(targetId);
                 }
             });
         });
 
-        // Add animation on scroll
+        // ===== ACTIVE NAVIGATION STATE =====
+        function updateActiveNav(targetId) {
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('text-orange-500');
+                if (link.getAttribute('href') === targetId) {
+                    link.classList.add('text-orange-500');
+                }
+            });
+        }
+
+        // ===== SCROLL ANIMATIONS =====
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -373,15 +1466,218 @@
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
+
+                    // Trigger installation progress animation
+                    if (entry.target.classList.contains('installation-card')) {
+                        animateInstallationStep(entry.target.dataset.stepCard);
+                    }
                 }
             });
         }, observerOptions);
 
-        document.querySelectorAll('.card-hover').forEach(card => {
+        // Observe elements for animations
+        document.querySelectorAll('.card, .installation-card').forEach(card => {
             card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
+            card.style.transform = 'translateY(30px)';
             card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(card);
+        });
+
+        // ===== INSTALLATION PROGRESS ANIMATION =====
+        function animateInstallationStep(stepNumber) {
+            const stepIndicator = document.querySelector(`[data-step="${stepNumber}"]`);
+            if (stepIndicator && !stepIndicator.classList.contains('completed')) {
+                const circle = stepIndicator.querySelector('div');
+                circle.classList.remove('bg-gray-300', 'text-gray-600');
+                circle.classList.add('bg-gradient-primary', 'text-white');
+                stepIndicator.classList.add('completed');
+
+                // Animate the progress line
+                const progressLine = stepIndicator.nextElementSibling;
+                if (progressLine && progressLine.classList.contains('bg-gray-300')) {
+                    setTimeout(() => {
+                        progressLine.classList.remove('bg-gray-300');
+                        progressLine.classList.add('bg-gradient-primary');
+                    }, 300);
+                }
+            }
+        }
+
+        // ===== SCROLL-BASED NAVIGATION HIGHLIGHTING =====
+        function updateNavigationOnScroll() {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollPosition = window.pageYOffset + 100;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    updateActiveNav(`#${sectionId}`);
+                }
+            });
+        }
+
+        // ===== ENHANCED PARALLAX EFFECT =====
+        function updateParallax() {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.hero-gradient::before, .hero-gradient::after');
+
+            parallaxElements.forEach(element => {
+                const speed = 0.5;
+                const yPos = -(scrolled * speed);
+                element.style.transform = `translateY(${yPos}px)`;
+            });
+        }
+
+        // ===== TYPING ANIMATION FOR HERO =====
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.textContent = '';
+
+            function type() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+
+            type();
+        }
+
+        // ===== INTERACTIVE CODE BLOCKS =====
+        document.querySelectorAll('.code-block').forEach(block => {
+            block.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.02)';
+                this.style.boxShadow = 'var(--shadow-lg)';
+            });
+
+            block.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+                this.style.boxShadow = 'var(--shadow-sm)';
+            });
+        });
+
+        // ===== KEYBOARD NAVIGATION =====
+        document.addEventListener('keydown', function(e) {
+            // Press '/' to focus search (future feature)
+            if (e.key === '/' && !e.ctrlKey && !e.metaKey) {
+                e.preventDefault();
+                // Future: Implement search functionality
+            }
+
+            // Press 'Escape' to close any open modals
+            if (e.key === 'Escape') {
+                // Future: Close modals
+            }
+        });
+
+        // ===== PERFORMANCE OPTIMIZATION =====
+        let ticking = false;
+        function requestTick() {
+            if (!ticking) {
+                window.requestAnimationFrame(updateOnScroll);
+                ticking = true;
+            }
+        }
+
+        function updateOnScroll() {
+            updateNavigationOnScroll();
+            updateParallax();
+            ticking = false;
+        }
+
+        // ===== EVENT LISTENERS =====
+        window.addEventListener('scroll', requestTick);
+        window.addEventListener('resize', () => {
+            // Recalculate animations on resize
+            observer.disconnect();
+            document.querySelectorAll('.card, .installation-card').forEach(card => {
+                observer.observe(card);
+            });
+        });
+
+        // ===== INITIALIZE =====
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initial navigation update
+            updateNavigationOnScroll();
+
+            // Add entrance animations
+            document.querySelectorAll('.feature-icon').forEach((icon, index) => {
+                setTimeout(() => {
+                    icon.style.animation = 'none';
+                    icon.style.transform = 'scale(1)';
+                }, index * 200);
+            });
+
+            // Show welcome toast after delay
+            setTimeout(() => {
+                showToast('Welcome to Data Pizza! 🍕', 'info');
+            }, 2000);
+        });
+
+        // ===== ACCESSIBILITY ENHANCEMENTS =====
+        // Focus management for modal interactions
+        document.addEventListener('focusin', function(e) {
+            // Future: Handle focus trapping in modals
+        });
+
+        // Screen reader announcements
+        function announceToScreenReader(message) {
+            const announcement = document.createElement('div');
+            announcement.setAttribute('aria-live', 'polite');
+            announcement.setAttribute('aria-atomic', 'true');
+            announcement.className = 'sr-only';
+            announcement.textContent = message;
+            document.body.appendChild(announcement);
+
+            setTimeout(() => {
+                document.body.removeChild(announcement);
+            }, 1000);
+        }
+
+        // ===== LAZY LOADING FOR IMAGES (future) =====
+        function lazyLoadImages() {
+            const images = document.querySelectorAll('img[data-src]');
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+
+            images.forEach(img => imageObserver.observe(img));
+        }
+
+        // ===== ANALYTICS TRACKING (future) =====
+        function trackEvent(eventName, properties = {}) {
+            // Future: Implement analytics tracking
+            console.log('Event:', eventName, properties);
+        }
+
+        // Track button clicks
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function() {
+                trackEvent('button_click', {
+                    button_text: this.textContent.trim(),
+                    button_type: this.classList.contains('btn-primary') ? 'primary' : 'secondary'
+                });
+            });
+        });
+
+        // Track copy events
+        document.querySelectorAll('[onclick*="copyToClipboard"]').forEach(button => {
+            button.addEventListener('click', function() {
+                trackEvent('code_copy', {
+                    code_type: this.closest('.code-block').querySelector('.text-xs').textContent
+                });
+            });
         });
     </script>
 </body>
